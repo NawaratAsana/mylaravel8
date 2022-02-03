@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 use App\Http\Controllers\API\BookController;
 Route::apiResource('book', BookController::class);
+use App\Http\Controllers\API\LocationController;
+Route::apiResource('location', LocationController::class);
