@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\API\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -22,3 +22,5 @@ use App\Http\Controllers\API\BookController;
 Route::apiResource('book', BookController::class);
 use App\Http\Controllers\API\LocationController;
 Route::apiResource('location', LocationController::class);
+Route::post('/sanctum/token', [UserController::class, 'token']);
+Route::post('/sanctum/token/register', [UserController::class, 'register']);
